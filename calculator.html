@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          "Open Sans", "Helvetica Neue", sans-serif;
+        background-color: blanchedalmond;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+      }
+
+      h1 {
+        font-family: "Courier New", Courier, monospace;
+        color: cornflowerblue;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      button {
+        background-color: rgb(195, 177, 177);
+        border-radius: 100%;
+        color: white;
+        height: 100px;
+        width: 100px;
+        border-style: none;
+        font-size: x-large;
+        margin: 0 0.5% 1.5% 0.5%;
+      }
+
+      button:hover {
+        background-color: rgb(164, 152, 152);
+      }
+
+      .calculator {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+      }
+
+      .calculator :first-child {
+        width: 400px;
+        border-radius: 5%;
+        padding-left: 5px;
+        text-align: left;
+        overflow: auto;
+      }
+
+      /* souldnt have even been a button to begin with lol */
+      .calculator :first-child:hover {
+        background-color: rgb(195, 177, 177);
+      }
+
+      #result-paragraph {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .most-right-btn {
+        background-color: rgb(248, 175, 39);
+      }
+
+      .most-right-btn:hover {
+        background-color: rgb(206, 154, 59);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My first ever Javascript project</h1>
+
+    <main>
+      <section class="calculator">
+        <!-- display result + clear button -->
+        <button disabled>
+          <p onclick="" id="result-paragraph">0</p>
+        </button>
+
+        <!-- first row -->
+        <button onclick="addValueToCalculation('1');">1</button>
+        <button onclick="addValueToCalculation('2');">2</button>
+        <button onclick="addValueToCalculation('3');">3</button>
+        <button onclick="addValueToCalculation('+');" class="most-right-btn">+</button>
+
+        <!-- second row -->
+        <button onclick="addValueToCalculation('4');">4</button>
+        <button onclick="addValueToCalculation('5');">5</button>
+        <button onclick="addValueToCalculation('6');">6</button>
+        <button onclick="addValueToCalculation('-');" class="most-right-btn">-</button>
+
+        <!-- third row -->
+        <button onclick="addValueToCalculation('7');">7</button>
+        <button onclick="addValueToCalculation('8');">8</button>
+        <button onclick="addValueToCalculation('9');">9</button>
+        <button onclick="addValueToCalculation('*');" class="most-right-btn">*</button>
+
+        <!-- fourth row -->
+        <button onclick="addValueToCalculation('0');">0</button>
+        <button onclick="addValueToCalculation('.');">.</button>
+        <button onclick="displayResult();">=</button>
+        <button onclick="addValueToCalculation('/');" class="most-right-btn">/</button>
+
+        <!-- fifth row -->
+        <button onclick="remvoveLastCharFromCalc();">del</button>
+        <button onclick="resetCalculation();">clear</button>
+      </section>
+    </main>
+
+    <script>
+      const display = document.getElementById("result-paragraph");
+
+      let calculation = "0";
+
+      function addValueToCalculation(input) {
+        curText = display.textContent;
+        if (curText == "0" || curText == "Invalid operation") {
+          calculation = input;
+        } else {
+          calculation += input;
+        }
+        displayCalculationString();
+      }
+
+      function displayCalculationString() {
+        display.textContent = calculation;
+      }
+
+      function displayResult() {
+        calculation = calcResult();
+        displayCalculationString();
+      }
+
+      // returns string
+      function calcResult() {
+        let result = "0";
+        try {
+          result = eval(calculation).toString();
+          return result;
+        } catch (error) {
+          return "Invalid operation";
+        }
+      }
+
+      function resetCalculation() {
+        calculation = "0";
+        displayCalculationString();
+      }
+
+      function remvoveLastCharFromCalc() {
+        if (calculation.length <= 1) {
+          calculation = "0";
+        } else {
+          calculation = calculation.slice(0, -1);
+        }
+        displayCalculationString();
+      }
+    </script>
+  </body>
+</html>
