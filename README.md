@@ -1,2 +1,30 @@
-# webdev_journey_calculator
-My first web-project using html, css and js
+# My first JavaScript project - Calculator
+
+## how long it took me 
+- roughly 1.5 hours
+
+## My thought after "finishing" it:
+- Was really fun to design something from scratch, I'm really enjoying these programming-languages so far.
+- I'm not really too happy with it, since I know there can be errors somtimes.\
+  (I am using eval() to calculate the result of the input. When it throws an error, I display "Invalid Operation" on the calculator.
+- I know that this webpage is not mobile/resizing friendly (I think you call that responsive).\
+   -> I defintly want to learn how to implement that in css
+- Also, I feel like I cheated, because I basically did no complicated logic since it all relies on the eval() function.
+- Overall I would say it's an ok start into my javascript journey\
+  -> I'm glad I didn't need any tutorials/ help to do this, only thing I got from google was the eval() function
+- The code is probably reall spaghetti (hey don't judge me! - it will get better!)
+- Javascript feels like modern java so far. I'm interested to see what it can do and why my professor hates it lol
+
+## my coding-experience at the point of this project:
+- good at coding and understanding concepts in java and c#
+- basic knowledge of html, css and javaScript, but first time writing it
+- first time using vscode (maybe there is a reason why everyone uses it, it feels really nice and lightweight, probably because im used to Ide's)
+
+## future goals and projects I want to do:
+- get better at understanding the web-infrastructure in general, I know core concepts and modells, but I really wanna dive deeper.
+- improve at html, css and js. -> after that start learning typescript and something like React or Angular 
+- start working with api requests
+- also wan't to learn python better. (I feel like the basics are really simple, but there is soo much you can learn to improve efficiency)
+- My end goal is to create a path-finding and a resume webpage (maybe not the most creative projects lol)
+
+Also, when i do larger project, i wanna use the readme like an update-log.
