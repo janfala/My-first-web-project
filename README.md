@@ -4,7 +4,7 @@
 - roughly 1.5 hours
   
 
-## my coding experience at the point of this project:
+## My coding experience at the point of this project:
 - good at coding and understanding concepts in java and c#
 - basic knowledge of html, css and javaScript, but first time writing it myself
 - first time using vscode (maybe there is a reason why everyone uses it, it feels really nice and lightweight, probably because im used to Ide's)
@@ -23,7 +23,7 @@
 - Javascript feels like a modern version of java so far (syntax-wise). I'm interested to see what it can do and why my professor hates it lol
 
 
-## future goals and projects I want to do:
+## Future goals and projects I want to do:
 - get better at understanding the web-infrastructure in general, I know core concepts and modells, but I really wanna dive deeper.
 - improve at html, css and js. -> after that, start learning typescript and something like React or Angular 
 - start working with api requests and data
